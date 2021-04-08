@@ -12,6 +12,8 @@
   --black: #0f0f0f;
   --white: #ffffff;
   --lightGray: #d3d3d3;
+  --springGreen: #00ff7f;
+  --orangeRed: #ff4500;
 }
 
 /* MAIN BODY AND BACKGROUND */
@@ -80,3 +82,13 @@ input:hover {
   transform: scale(1.25);
   filter: contrast(10);
 }
+
+.card input:valid {
+  border: 3px solid var(--springGreeen);
+  border-radius: 5px;
+}
+
+/* .card input:invalid {
+  border: 3px solid var(--orangeRed);
+  border-radius: 5px;
+} */
