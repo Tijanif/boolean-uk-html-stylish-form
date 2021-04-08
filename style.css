@@ -11,73 +11,72 @@
   --third: #ffcc70;
   --black: #0f0f0f;
   --white: #ffffff;
+  --lightGray: #d3d3d3;
 }
 
-.main-section {
+/* MAIN BODY AND BACKGROUND */
+body {
   height: 100vh;
-  background-color: var(--black);
-
   display: grid;
-  grid-template:
-    ". container ." /
-    150px 1fr 150px;
-  padding: 50px;
-}
-
-.card-cover {
-  grid-area: container;
+  place-items: center;
   background-color: var(--pramary);
   background-image: linear-gradient(
     19deg,
     var(--pramary) 0%,
     var(--secondary) 100%
   );
-  /* padding: 50px; */
-
-  display: grid;
-  grid-template:
-    ". card ." /
-    auto 500px auto;
 }
 
+/* CARD AND FORM ITEMS */
 .card {
-  grid-area: card;
-  background-color: var(--white);
-
-  border-radius: 5px;
+  display: grid;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 10px;
+  background: var(--white);
   box-shadow: 2px 2px 5px 0 #00000090;
-  padding: 50px;
-}
-
-.form-label--text {
-  display: block;
 }
 
 .card h1 {
   text-align: center;
   font-size: 2rem;
-
-  /* margin-bottom: 50px; */
+}
+.card label {
+  display: block;
+  color: var(--lightGray);
+  padding-bottom: 10px;
+}
+.card input,
+select,
+textarea {
+  border: none;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 10px;
+  transition: 0.4s;
+}
+.card input:focus,
+select:hover,
+input:hover {
+  border: none;
+  transform: scale(1.1);
 }
 
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  border: 0;
-  margin: 30px 0;
-
-  transition: all 0.3s;
-  border-bottom: 2px solid #bebed2;
+.card button {
+  background-color: var(--pramary);
+  background-image: linear-gradient(
+    19deg,
+    var(--pramary) 0%,
+    var(--secondary) 100%
+  );
+  border-radius: 20px;
+  padding: 6px;
+  border: none;
+  margin: 10px;
+  color: var(--white);
+  transition: 0.5s;
+  width: 200px;
 }
-input:focus {
-  outline: none;
-  border: 0;
-  border-bottom: 2px solid #78788c;
-}
-p {
-  margin: 28px 0 0;
-  font-size: 14px;
-  color: #5a5a5a;
+.card button:hover {
+  transform: scale(1.25);
+  filter: contrast(10);
 }
