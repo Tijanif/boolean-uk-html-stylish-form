@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "sans-serif";
+}
+
+:root {
+  --pramary: #21d4fd;
+  --secondary: #b721ff;
+  --third: #ffcc70;
+  --black: #0f0f0f;
+  --white: #ffffff;
+}
+
+.main-section {
+  height: 100vh;
+  background-color: var(--black);
+
+  display: grid;
+  grid-template:
+    ". container ." /
+    auto 960px auto;
+}
+
+.card-cover {
+  grid-area: container;
+  background-color: var(--pramary);
+  background-image: linear-gradient(
+    19deg,
+    var(--pramary) 0%,
+    var(--secondary) 100%
+  );
+
+  padding: 20px;
+}
