@@ -54,7 +54,6 @@ textarea {
   border: none;
   border-bottom: 2px solid var(--secondary);
   padding-bottom: 10px;
-  transition: 0.4s;
 }
 .card input:focus,
 select:hover,
